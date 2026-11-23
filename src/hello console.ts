@@ -1,2 +1,2 @@
 // Fitur delete dan search oleh Rifqi
-ghdadasasfbfbafas
+console.log("ghdadasasfbfbafas");
