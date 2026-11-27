@@ -86,13 +86,13 @@ let daftarTagihan: TagihanListrik[] = [
 
 // 3. KERANGKA FUNGSI BERTIPE (Bagian Arsyad: Create & Helper Hitung)
 function hitungBiayaDasar(kwh: number, tarif: number): number {
-  // Contoh penerapan operator aritmatika untuk syarat Progress 2
   return kwh * tarif;
 }
 
 function tambahTagihan(): void {
   console.log('\n[INFO] Fitur Tambah Tagihan (Create) akan diimplementasikan pada Progress 3.');
 }
+
 // KERANGKA FUNGSI BERTIPE (Bagian Meisa: Read & Update)
 function tampilkanSemuaTagihan(): void {
   console.log('\n[INFO] Fitur Tampilkan Semua Data (Read All) akan diimplementasikan pada Progress 4.');
@@ -106,11 +106,19 @@ function ubahTagihan(): void {
   console.log('\n[INFO] Fitur Ubah Data Tagihan (Update) akan diimplementasikan pada Progress 5.');
 }
 
+// KERANGKA FUNGSI BERTIPE (Bagian Rifki: Delete & Search)
+function hapusTagihan(): void {
+  console.log('\n[INFO] Fitur Hapus Data Tagihan (Delete) akan diimplementasikan pada Progress 5.');
+}
+
+function cariTagihan(): void {
+  console.log('\n[INFO] Fitur Cari & Filter Tagihan (Search) akan diimplementasikan pada Progress 6.');
+}
+
 // 4. FUNGSI MENU UTAMA & NAVIGASI (Looping + Seleksi Kondisi)
 function tampilkanMenu(): void {
   let isBerjalan: boolean = true;
 
-  // Perulangan menu sampai pengguna memilih keluar (0)
   while (isBerjalan) {
     console.log('\n======================================================');
     console.log('   SISTEM MANAJEMEN & PERHITUNGAN TAGIHAN LISTRIK');
@@ -124,32 +132,14 @@ function tampilkanMenu(): void {
     console.log('0. Keluar Program');
     console.log('======================================================');
 
-    // Menggunakan readlineSync.question() untuk membaca input dari terminal
     const pilihanInput: string = readlineSync.question('Pilih menu (0-6): ').trim();
     const pilihanMenu: number = Number(pilihanInput);
 
-    // Validasi awal jika input kosong atau bukan angka (NaN)
     if (pilihanInput === '' || isNaN(pilihanMenu)) {
       console.log('[ERROR] Input tidak valid! Harap masukkan angka antara 0 sampai 6.');
       continue;
     }
-// --- BAGIAN ATAS: DEFINISI FUNGSI-FUNGSI ---
-function ubahTagihan(): void {
-  console.log('\n[INFO] Fitur Ubah Data Tagihan (Update) akan diimplementasikan pada Progress 5.');
-}
 
-// KERANGKA FUNGSI BERTIPE (Bagian Rifki: Delete & Search) <-- TARUH DI SINI
-function hapusTagihan(): void {
-  console.log('\n[INFO] Fitur Hapus Data Tagihan (Delete) akan diimplementasikan pada Progress 5.');
-}
-
-function cariTagihan(): void {
-  console.log('\n[INFO] Fitur Cari & Filter Tagihan (Search) akan diimplementasikan pada Progress 6.');
-}
-
-// --- BAGIAN BAWAH: DI DALAM SWITCH MENU UTAMA ---
-function tampilkanMenu(): void {
-    // Seleksi kondisi percabangan menu utama
     switch (pilihanMenu) {
       case 1:
         tambahTagihan();
@@ -174,7 +164,6 @@ function tampilkanMenu(): void {
         isBerjalan = false;
         break;
       default:
-        // Menangani angka di luar 0-6 (misal: 9 atau -1)
         console.log('[ERROR] Pilihan menu tidak tersedia! Silakan pilih angka 0 sampai 6.');
         break;
     }
