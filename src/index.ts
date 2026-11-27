@@ -1,7 +1,4 @@
-import promptSync = require('prompt-sync');
-
-// Inisialisasi fungsi input terminal
-const input = promptSync({ sigint: true });
+import * as readlineSync from 'readline-sync';
 
 // 1. DEFINISI STRUKTUR DATA (Sesuai BAB I Sub-bab 1.1 Laporan)
 interface TagihanListrik {
@@ -127,7 +124,8 @@ function tampilkanMenu(): void {
     console.log('0. Keluar Program');
     console.log('======================================================');
 
-    const pilihanInput: string = input('Pilih menu (0-6): ').trim();
+    // Menggunakan readlineSync.question() untuk membaca input dari terminal
+    const pilihanInput: string = readlineSync.question('Pilih menu (0-6): ').trim();
     const pilihanMenu: number = Number(pilihanInput);
 
     // Validasi awal jika input kosong atau bukan angka (NaN)
