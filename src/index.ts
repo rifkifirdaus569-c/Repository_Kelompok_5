@@ -167,4 +167,4 @@ function tampilkanMenu(): void {
 }
 
 // Menjalankan aplikasi utama
-tampilkanMenu()
+tampilkanMenu();
