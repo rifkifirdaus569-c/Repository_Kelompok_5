@@ -135,7 +135,22 @@ function tampilkanMenu(): void {
       console.log('[ERROR] Input tidak valid! Harap masukkan angka antara 0 sampai 6.');
       continue;
     }
+// --- BAGIAN ATAS: DEFINISI FUNGSI-FUNGSI ---
+function ubahTagihan(): void {
+  console.log('\n[INFO] Fitur Ubah Data Tagihan (Update) akan diimplementasikan pada Progress 5.');
+}
 
+// KERANGKA FUNGSI BERTIPE (Bagian Rifki: Delete & Search) <-- TARUH DI SINI
+function hapusTagihan(): void {
+  console.log('\n[INFO] Fitur Hapus Data Tagihan (Delete) akan diimplementasikan pada Progress 5.');
+}
+
+function cariTagihan(): void {
+  console.log('\n[INFO] Fitur Cari & Filter Tagihan (Search) akan diimplementasikan pada Progress 6.');
+}
+
+// --- BAGIAN BAWAH: DI DALAM SWITCH MENU UTAMA ---
+function tampilkanMenu(): void {
     // Seleksi kondisi percabangan menu utama
     switch (pilihanMenu) {
       case 1:
@@ -151,10 +166,10 @@ function tampilkanMenu(): void {
         ubahTagihan();
         break;
       case 5:
-        console.log('\n[INFO] Fitur Hapus Data akan ditambahkan Rifki.');
+        hapusTagihan();
         break;
       case 6:
-        console.log('\n[INFO] Fitur Cari & Filter Data akan ditambahkan Rifki.');
+        cariTagihan();
         break;
       case 0:
         console.log('\nTerima kasih! Program manajemen tagihan listrik ditutup.');
