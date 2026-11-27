@@ -96,6 +96,18 @@ function hitungBiayaDasar(kwh: number, tarif: number): number {
 function tambahTagihan(): void {
   console.log('\n[INFO] Fitur Tambah Tagihan (Create) akan diimplementasikan pada Progress 3.');
 }
+// KERANGKA FUNGSI BERTIPE (Bagian Meisa: Read & Update)
+function tampilkanSemuaTagihan(): void {
+  console.log('\n[INFO] Fitur Tampilkan Semua Data (Read All) akan diimplementasikan pada Progress 4.');
+}
+
+function tampilkanDetailTagihan(): void {
+  console.log('\n[INFO] Fitur Struk Detail per ID (Read Detail) akan diimplementasikan pada Progress 4.');
+}
+
+function ubahTagihan(): void {
+  console.log('\n[INFO] Fitur Ubah Data Tagihan (Update) akan diimplementasikan pada Progress 5.');
+}
 
 // 4. FUNGSI MENU UTAMA & NAVIGASI (Looping + Seleksi Kondisi)
 function tampilkanMenu(): void {
@@ -130,13 +142,13 @@ function tampilkanMenu(): void {
         tambahTagihan();
         break;
       case 2:
-        console.log('\n[INFO] Fitur Tampil Semua Data akan ditambahkan Meisa.');
+        tampilkanSemuaTagihan();
         break;
       case 3:
-        console.log('\n[INFO] Fitur Detail Tagihan per ID akan ditambahkan Meisa.');
+        tampilkanDetailTagihan();
         break;
       case 4:
-        console.log('\n[INFO] Fitur Ubah Data akan ditambahkan Meisa.');
+        ubahTagihan();
         break;
       case 5:
         console.log('\n[INFO] Fitur Hapus Data akan ditambahkan Rifki.');
